@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "str.c"
+#include "str.h"
 
 int main(){
     Seqlist L;

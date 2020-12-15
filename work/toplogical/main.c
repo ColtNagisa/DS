@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "algraph.c"
+#include "algraph.h"
 #include "stack.c"
 #define  MAX_VERTEX_NUM 20//最大顶点个数
 #define  VertexType int//顶点数据的类型

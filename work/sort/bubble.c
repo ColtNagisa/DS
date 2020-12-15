@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "sqlist.c"
+#include "sqlist.h"
 
 void Show(SqList *L);
 void bubble_sort(SqList *L);

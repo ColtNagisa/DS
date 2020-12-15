@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "sqlist.c"
+#include "sqlist.h"
 
 int LT(int a, int b);
 void Show(SqList *L);
