@@ -3,23 +3,6 @@
 #include <string.h>
 #define MAXSIZE 100
 
-char *Init_SeqString();
-int BF_StrIndex(char *s, char *t);
-void Next(char *T, int *next);
-int KMP(char *S, char *T);
-
-
-int main(){
-    char *s = Init_SeqString();
-    char *t = Init_SeqString();
-    //int num = BF_StrIndex(s, t);//BF
-    int num2 = KMP(s, t);//KMP
-    //printf("%d", num);
-    printf("%d", num2);
-    system("pause");
-    return 0;
-}
-
 //初始化
 char *Init_SeqString(){
     char *s = (char*)malloc(sizeof(char) * MAXSIZE);

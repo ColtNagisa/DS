@@ -6,22 +6,6 @@ typedef struct node {
     struct node* next;
 }LNode, * LinkList;
 
-LinkList Creatr_LinkList();
-LinkList ReverseList(LinkList L);
-
-int main(){
-    LinkList L = Creatr_LinkList();
-    LinkList h = ReverseList(L);
-    printf("\n");
-    for (int i = 0; i < 10;i++){
-        int num;
-        h = h->next;
-        num = h->data;
-        printf("%d", num);
-    }
-    system("pause");
-}
-
 LinkList Creatr_LinkList(){
     LinkList L = NULL;
     LNode *s, *r = NULL;
@@ -53,7 +37,7 @@ while(L){
     h1 = L->next;
     L->next = h;
     h = L;
-    L = h1; //L指向h 不能用L=L->next
+    L = h1; //L->next指向h 不能用L=L->next
 }
 return h;
 }

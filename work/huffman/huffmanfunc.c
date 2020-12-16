@@ -15,15 +15,6 @@ typedef struct {
     int parent, lchild, rchild;
 } HNode;
 
-void HuffmanTree(HNode HuffmanNode[]);
-void HuffmanCode();
-
-int main(){
-    HuffmanCode();
-    system("pause");
-    return 0;
-}
-
 void HuffmanTree(HNode HuffmanNode[]){
     int i, j, a1, a2, b1, b2, n;
     scanf("%d", &n);

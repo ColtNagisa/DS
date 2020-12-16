@@ -8,30 +8,6 @@ typedef struct
     int top;
 }SeqStack;
 
-SeqStack *Init_SStack();
-int Empty_SStack(SeqStack *s);
-int Push_SStack(SeqStack *s, int e);
-int Pop_SStack(SeqStack *s);
-
-int main(){
-    SeqStack *s = Init_SStack();
-    int num;
-    char symbol;
-    while (symbol!='!')
-    {
-        scanf("%d", &num);
-        Push_SStack(s, num);
-        symbol = getchar();
-    }
-    Pop_SStack(s);
-    
-    for (int i = 0; i < s->top;i++){
-        printf("%d", s->data[i]);
-    }
-    system("pause");
-    return 0; 
-}
-
 //初始化栈
 SeqStack *Init_SStack(){
     SeqStack *s;

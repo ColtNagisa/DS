@@ -7,26 +7,6 @@ typedef struct BTNode{
     struct BTNode *lchild, *rchild;
 } BTNode, *BITree;
 
-
-BITree CreateBITree();
-void LeveOrder(BITree t);
-void PreOrderF(BITree bt);
-void PreOrderM(BITree bt);
-void PreOrderB(BITree bt);
-
-int main(){
-    BITree t = CreateBITree();
-    printf("前序\n");
-    PreOrderF(t);
-    printf("\n中序\n");
-    PreOrderM(t);
-    printf("\n后序\n");
-    PreOrderB(t);
-    printf("\n层次\n");
-    LeveOrder(t);
-    system("pause");
-    return 0;
-}
 //生成树
 BITree CreateBITree(){
     BITree t;
@@ -90,4 +70,3 @@ void LeveOrder(BITree t){
         }
     }
 }
-
