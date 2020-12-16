@@ -15,6 +15,22 @@ typedef struct BiThrNode{
 BiThrTree pre=NULL;
 //采用前序初始化二叉树
 //中序和后序只需改变赋值语句的位置即可
+
+void CreateTree(BiThrTree *tree);
+void InThreading(BiThrTree p);
+void InOrderThraverse_Thr(BiThrTree p);
+
+int main() {
+    BiThrTree t;
+    printf("输入前序二叉树:\n");
+    CreateTree(&t);
+    InThreading(t);
+    printf("输出中序序列:\n");
+    InOrderThraverse_Thr(t);
+    system("pause");
+    return 0;
+}
+
 void CreateTree(BiThrTree * tree){
     char data;
     scanf("%c",&data);
@@ -69,13 +85,4 @@ void InOrderThraverse_Thr(BiThrTree p)
         //否则，按照中序遍历的规律，找其右子树中最左下的结点，也就是继续循环遍历
         p = p->rchild;
     }
-}
-int main() {
-    BiThrTree t;
-    printf("输入前序二叉树:\n");
-    CreateTree(&t);
-    InThreading(t);
-    printf("输出中序序列:\n");
-    InOrderThraverse_Thr(t);
-    return 0;
 }

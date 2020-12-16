@@ -50,10 +50,10 @@ return L;
 LinkList h = NULL; 
 LNode* h1 = L;
 while(L){
-h1 = L->next;
-L->next = h;
-h = L;
-L = h1;
+    h1 = L->next;
+    L->next = h;
+    h = L;
+    L = h1; //L指向h 不能用L=L->next
 }
 return h;
 }
